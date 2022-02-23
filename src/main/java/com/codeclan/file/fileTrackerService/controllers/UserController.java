@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/users")
-    public ResponseEntity<User> postShip(@RequestBody User user) {
+    public ResponseEntity<User> postUser(@RequestBody User user) {
         userRepository.save(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
